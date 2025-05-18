@@ -8,7 +8,6 @@ CREATE TABLE Curso (
   idCurso INT PRIMARY KEY AUTO_INCREMENT,
   nombreCurso VARCHAR(50),
   anio INT,
-  turno VARCHAR(20)
 );
 
 -- Tabla Estudiante
@@ -113,3 +112,21 @@ CREATE TABLE Reunion (
   FOREIGN KEY (idEstudiante) REFERENCES Estudiante(idEstudiante),
   FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
 );
+
+-- INSERT de ejemplo
+INSERT INTO Materia (idMateria, nombre_materia)
+VALUES (1, 'Matemática');
+
+-- SELECT de ejemplo
+SELECT nombre, apellido
+FROM Estudiante
+WHERE idCurso = 3;
+
+-- DELETE de ejemplo
+DELETE FROM usuarios_rol
+WHERE idUsuario = 4 AND idRol = 2;
+
+
+
+
+
